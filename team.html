@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fight for Fair</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+
+    <!-- Matomo -->
+    <script>
+      var _paq = (window._paq = window._paq || [])
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView'])
+      _paq.push(['enableLinkTracking'])
+      ;(function () {
+        var u = '//stats.productwar.com/'
+        _paq.push(['setTrackerUrl', u + 'matomo.php'])
+        _paq.push(['setSiteId', '8'])
+        var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0]
+        g.async = true
+        g.src = u + 'matomo.js'
+        s.parentNode.insertBefore(g, s)
+      })()
+    </script>
+    <!-- End Matomo Code -->
+
+    <!--Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/e34bd7904a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--End Font Awesome-->
+  </head>
+  <body class="index is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <h3 id="logo" class="logo">
+          <img
+            src="assets/css/icons/hand-fist-solid.svg"
+            alt="fist"
+            style="width: 15px; height: 15px; margin-right: 5px"
+          /><a href="index.html"
+            ><strong>Fight</strong> <span>for Fair</span></a
+          >
+        </h3>
+        <nav id="nav">
+          <ul class="navbar">
+            <li class="current"><a href="team.html">Join Our Team</a></li>
+            <li>
+              <a href="contact.html" class="button primary">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <article id="main">
+        <header class="special container">
+          <!-- <span class="icon solid fa-trophy" style="color: #225756"></span> -->
+          <h1>Join Our Team</h1>
+          <p class="subtext">
+            Do you have a healthcare background or previous experience with
+            medical or pharmacy billing? Join our team of volunteers to help
+            patients fight for fair prices!
+          </p>
+        </header>
+
+        <!-- Two -->
+        <section class="wrapper style3 container special form">
+          <div class="row">
+            <div class="col-4 col-12-narrower"></div>
+          </div>
+          <form name="contact">
+            <h4
+              style="
+                text-transform: none;
+                font-weight: bold;
+                margin-bottom: 40px;
+              "
+            >
+              Fill out the form below, and we'll reach out with ways that you
+              can get involved.
+            </h4>
+            <div>
+              <h3>Your Name</h3>
+              <input type="text" name="name" required />
+              <br />
+
+              <h3>Email Address</h3>
+              <input
+                type="email"
+                name="email"
+                placeholder="me@email.com"
+                required
+              />
+              <br />
+
+              <h3>Message</h3>
+              <textarea
+                name="message"
+                type="text"
+                cols="40"
+                rows="5"
+                required
+              ></textarea>
+
+              <br />
+
+              <input
+                type="submit"
+                value="Send Message"
+                onClick="submitForm()"
+              />
+
+              <script>
+                function submitForm() {
+                  const scriptURL =
+                    'https://script.google.com/macros/s/AKfycbxbFY-IJtgZFil48KN4dlMIvIZO1RMnDucb6csoUTU2Op_IWXt1rnbSiI-KnSaWQkgBmQ/exec'
+                  const form = document.forms['contact']
+                  form.addEventListener('submit', (e) => {
+                    e.preventDefault()
+                    fetch(scriptURL, {
+                      method: 'POST',
+                      body: new FormData(form),
+                    }).then(document.forms['contact'].reset())
+                  })
+                  form.addEventListener('submit', onSubmit)
+                  function onSubmit() {
+                    alert(`Thanks! We'll be in touch soon.`)
+                  }
+                }
+              </script>
+            </div>
+          </form>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta">
+          <header>
+            <h2>Ready to <strong>fight for fair</strong>?</h2>
+          </header>
+          <footer>
+            <ul class="buttons">
+              <!-- <li><a href="donate.html" class="button">Donate</a></li> -->
+              <li>
+                <a href="contact.html" class="button primary">Contact Us</a>
+              </li>
+            </ul>
+          </footer>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <ul>
+            <ol>
+              &copy;
+              <script type="text/javascript">
+                document.write(new Date().getFullYear())
+              </script>
+              <strong>Fight for Fair™</strong>
+            </ol>
+          </ul>
+          <ul>
+            <ol>
+              <a href="terms-of-service.html">Terms of Service</a>
+            </ol>
+            <ol>
+              <a href="privacy-policy.html">Privacy Policy</a>
+            </ol>
+          </ul>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+      </article>
+    </div>
+  </body>
+</html>
